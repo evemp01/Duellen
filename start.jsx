@@ -12,3 +12,5 @@ const KomigenNuuuuuuu = () => {
     )
 
 }
+//hejhejhejhejhej
+//tjaba tjena 
