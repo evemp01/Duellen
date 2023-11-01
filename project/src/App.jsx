@@ -4,12 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
- 
-
   return (
     <>
-    <div>
-        <h1>TJABBA</h1>
+    <div className = 'addPlayer'>
+        <h1 >Lägg till spelare</h1>
     </div>
     </>
   )
