@@ -20,10 +20,10 @@ body {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-#addPlayer{
-  color: #FFc957;
-  width: 6em;
-  height: 6em;
+.addPlayer{
+  background-color: #FFc957;
+  width: 30em;
+  height: 30em;
 }
 
 @keyframes logo-spin {
