@@ -52,4 +52,10 @@ body {
 
 .read-the-docs {
   color: #888;
+} 
+
+* {
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box;
 }
