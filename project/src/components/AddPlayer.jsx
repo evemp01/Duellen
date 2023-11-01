@@ -1,11 +1,14 @@
-    const AddPlayer() {
-        return(
+    const AddPlayer = ({}) => {
+          return (
             <>    
                 <div className = 'addPlayer'>
                     <h1>Lägg till spelare</h1>
                     <div className = 'newPlayer'></div>
                     <h2>Spelare 1</h2>
                 </div>
-            </>)
-    }
+            </>
+          )
+      }
+      
+        export default AddPlayer
 
