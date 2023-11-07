@@ -6,6 +6,7 @@ const AddPlayer = () => {
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState('');
   const playerLimit = 10;
+  const minPlayers = 2;
 
   const handleInputChange = (event) => {
     setNewPlayer(event.target.value);
@@ -17,6 +18,11 @@ const AddPlayer = () => {
       setNewPlayer('');
     }
   };
+
+  const handleDeletePlayer = (index) => {
+    const updatedPlayers = players.filter((_, i) => i !== index);
+    setPlayers(updatedPlayers);
+  }
 
   return (
     <div className='addPlayer'>
@@ -30,14 +36,19 @@ const AddPlayer = () => {
           disabled = {playerLimit <= players.length}
         />
         <button onClick={handleAddPlayer} disabled = {playerLimit <= players.length}>+</button>
+        {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
       </div>
       <div>
         <ul>
           {players.map((player, index) => (
-            <li key={index}>{player}</li>
+            <li key={index}>{player}<button onClick={() => handleDeletePlayer(index)}>-</button></li>
           ))}
         </ul>
       </div>
+      <div>
+        {minPlayers > players.length && <p>Lägg till minst 2 stycken spelare</p>}
+        <button onClick={handleAddPlayer} disabled = {minPlayers > players.length}>Start</button>
+        </div>
     </div>
   );
 };
