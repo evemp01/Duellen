@@ -1,0 +1,32 @@
+.rulesDiv{
+    background-color: #FFC957;
+    width: 290px;
+    height: 400px;
+    border-radius: 25px;
+    font-family: 'Wendy One', sans-serif;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+   
+   
+}
+
+.alignRight{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.align{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.exitButton{
+    align-items: right;
+    border-radius: 50px;
+    background-color: #F55757;
+    font-size: 50px;
+    
+}
