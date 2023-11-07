@@ -21,7 +21,6 @@ function App() {
           ))}
         </ul>
       </div>
-    
   </div>
   )
 }
