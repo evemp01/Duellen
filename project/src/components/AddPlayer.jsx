@@ -19,10 +19,10 @@ const AddPlayer = () => {
   };
 
   return (
-    <div>
+    <div className='addPlayer'>
       <h1>Lägg till spelare</h1>
       <div>
-        <input
+        <input className='roundedCorners'
           type="text"
           value={newPlayer}
           onChange={handleInputChange}
