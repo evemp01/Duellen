@@ -19,18 +19,17 @@ const AddPlayer = () => {
 
   return (
     <div>
-      <h1>Add Players</h1>
+      <h1>Lägg till spelare</h1>
       <div>
         <input
           type="text"
           value={newPlayer}
           onChange={handleInputChange}
-          placeholder="Enter player name"
+          placeholder=""
         />
         <button onClick={handleAddPlayer}>+</button>
       </div>
       <div>
-        <h2>Players:</h2>
         <ul>
           {players.map((player, index) => (
             <li key={index}>{player}</li>
