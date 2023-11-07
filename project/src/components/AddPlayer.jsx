@@ -1,12 +1,31 @@
-const AddPlayer = ({}) => {
+import React, { useState } from 'react';
+import '../styles/AddPlayer.css'
+
+
+const AddPlayer = ({ onAdd }) => {
+  const [newPlayer, setNewPlayer] = useState('');
+
+  const handleInputChange = (event) => {
+    setNewPlayer(event.target.value);
+  };
+
+  const handleAddPlayer = () => {
+    if (newPlayer !== '') {
+      onAdd(newPlayer);
+      setNewPlayer('');
+    }
+  };
+
   return (
-    <>
-      <div className="addPlayer">
-        <h1>Lägg till spelare</h1>
-        <div className="newPlayer"></div>
-        <h2>Spelare 1</h2>
-      </div>
-    </>
+    <div>
+      <input
+        type="text"
+        value={newPlayer}
+        onChange={handleInputChange}
+        placeholder="Lägg till spelare"
+      />
+      <button onClick={handleAddPlayer}>+</button>
+    </div>
   );
 };
 
