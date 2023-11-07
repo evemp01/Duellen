@@ -5,13 +5,14 @@ import '../styles/AddPlayer.css'
 const AddPlayer = () => {
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState('');
+  const playerLimit = 10;
 
   const handleInputChange = (event) => {
     setNewPlayer(event.target.value);
   };
 
   const handleAddPlayer = () => {
-    if (newPlayer !== '') {
+    if (newPlayer !== '' && players.length < playerLimit) {
       setPlayers([...players, newPlayer]);
       setNewPlayer('');
     }
@@ -26,8 +27,9 @@ const AddPlayer = () => {
           value={newPlayer}
           onChange={handleInputChange}
           placeholder=""
+          disabled = {playerLimit <= players.length}
         />
-        <button onClick={handleAddPlayer}>+</button>
+        <button onClick={handleAddPlayer} disabled = {playerLimit <= players.length}>+</button>
       </div>
       <div>
         <ul>
