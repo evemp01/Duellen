@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import '../styles/AddPlayer.css';
+import { useNavigate } from 'react-router-dom';  
 
 
 const AddPlayer = () => {
+  const navigation = useNavigate();
   const [players, setPlayers] = useState([]);
   const [newPlayer, setNewPlayer] = useState('');
   const playerLimit = 10;
@@ -46,9 +48,18 @@ const AddPlayer = () => {
         </ul>
       </div>
       <div>
-        {minPlayers > players.length && <p>Lägg till minst 2 stycken spelare</p>}
-        <button onClick={handleAddPlayer} disabled = {minPlayers > players.length}>Start</button>
-        </div>
+      {minPlayers > players.length && <p>Lägg till minst 2 stycken spelare</p>}
+      <button
+        onClick={() => {
+          if (minPlayers <= players.length) {
+            navigation('/competition'); // Navigate to the Competition component
+          }
+        }}
+        disabled={minPlayers > players.length}
+      >
+        Start
+      </button>
+    </div>
     </div>
   );
 };
