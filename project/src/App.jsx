@@ -1,4 +1,5 @@
 import AddPlayer from './components/AddPlayer'
+import menu from './components/menu'
 import './App.css'
 import React, { useState } from 'react';
 
@@ -20,6 +21,10 @@ function App() {
             <li key={index}>{player}</li>
           ))}
         </ul>
+      </div>
+
+      <div className="cssmenu">
+        <menu/>
       </div>
     
   </div>
