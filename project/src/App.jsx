@@ -7,7 +7,9 @@ function App() {
   return (
   <div className="app_big_div"> 
     <AddPlayer/>
+    <h1>hejhej losers</h1>
   </div>
+  
   )
 }
 
