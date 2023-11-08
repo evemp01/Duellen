@@ -3,12 +3,16 @@
     border-radius: 50px;
     background-color: #FFC957;
     font-size: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
 .menuButton{
     align-items: right;
     border-radius: 50px;
     background-color: #FFC957;
     font-size: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }
 .playerText{
     font-family: 'Wendy One', sans-serif;
@@ -17,11 +21,30 @@
 .player1Button{
     border-radius: 15px;
     background-color: #0197F6;
+    height: 60px;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+
 }
+.player1Button:active {
+    transform: translateY(4px);
+  }
+
 .player2Button{
     border-radius: 15px;
     background-color: #F55757;
+    height: 60px;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+
 }
+.player2Button:active {
+    transform: translateY(4px);
+  }
 
 .align_menu_help{
     display: flex;
