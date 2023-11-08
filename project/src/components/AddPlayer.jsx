@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/AddPlayer.css'
+import '../styles/AddPlayer.css';
+import challengesJson from './../challenges.json';
 
 
 const AddPlayer = () => {
@@ -27,6 +28,7 @@ const AddPlayer = () => {
   return (
     <div className='addPlayer'>
       <h1>Lägg till spelare</h1>
+      {/* <h1>{challengesJson.allChallenges[0].challenge}</h1> */}
       <div>
         <input className='roundedCorners'
           type="text"
