@@ -3,12 +3,8 @@ const Who_won = () => {
     return (
         <div>
             <div className='align_menu_help'>
-                <div>
-                    <button className='helpButton'>?</button>
-                </div>
-                <div>
-                    <button className='menuButton'>≡</button>
-                </div>
+                <button className='helpButton'>?</button>
+                <button className='menuButton'>≡</button>
             </div>
             <div className='align' >
                 <h1>Vem vann?</h1>

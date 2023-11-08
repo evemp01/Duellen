@@ -1,18 +1,14 @@
-.helpButton{
-    align-items: left;
+.helpButton,.menuButton{ 
     border-radius: 50px;
     background-color: #FFC957;
     font-size: 50px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
+    width: 75px;
+    height: 75px;
 }
-.menuButton{
-    align-items: right;
-    border-radius: 50px;
-    background-color: #FFC957;
-    font-size: 50px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
+.helpButton:active,.menuButton:active {
+    background-color: #cca045;
 }
 .playerText{
     font-family: 'Wendy One', sans-serif;
@@ -29,8 +25,8 @@
 
 }
 .player1Button:active {
-    transform: translateY(4px);
-  }
+    background-color: #0187dd;
+}
 
 .player2Button{
     border-radius: 15px;
@@ -43,12 +39,13 @@
 
 }
 .player2Button:active {
-    transform: translateY(4px);
+    background-color: #dc4e4e;
   }
 
 .align_menu_help{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     
 }
 .align{
