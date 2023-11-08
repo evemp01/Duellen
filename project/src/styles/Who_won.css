@@ -1,0 +1,37 @@
+.helpButton{
+    align-items: left;
+    border-radius: 50px;
+    background-color: #FFC957;
+    font-size: 50px;
+}
+.menuButton{
+    align-items: right;
+    border-radius: 50px;
+    background-color: #FFC957;
+    font-size: 50px;
+}
+.playerText{
+    font-family: 'Wendy One', sans-serif;
+    font-size: 35px;
+}
+.player1Button{
+    border-radius: 15px;
+    background-color: #0197F6;
+}
+.player2Button{
+    border-radius: 15px;
+    background-color: #F55757;
+}
+
+.align_menu_help{
+    display: flex;
+    flex-direction: row;
+    
+}
+.align{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    
+}
