@@ -5,16 +5,16 @@ const Menu = () => {
   return(
     <div>
       <div className='alignright'>
-        <button className='exitButton' onClick>x</button>
+        <button className='exitButton' onClick={()=> {}}>x</button>
       </div>
       <div className='aligncenter'>
-        <button className='editPlayer' onClick>Redigera spelare</button>
+        <button className='editPlayer' onClick={()=> {}}>Redigera spelare</button>
       </div>
       <div className='aligncenter'>
-        <button className='toplist' onClick>Topplista</button>
+        <button className='toplist' onClick={()=> {}}>Topplista</button>
       </div>
       <div className='aligncenter'>
-        <button className='exitGame' onClick>Avsluta spel</button>
+        <button className='exitGame' onClick={()=> {}}>Avsluta spel</button>
       </div>
       </div>
  

@@ -7,7 +7,7 @@ import Menu from './components/Menu'
 function App() {
   return(
     <div className='app_big_div'>
-      <menu/>
+      <Menu/>
     </div>
   )
   }
