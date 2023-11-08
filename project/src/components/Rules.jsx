@@ -4,7 +4,7 @@ const Rules = () => {
     return (
         <div>
             <div className='alignRight'>
-                <button className='exitButton' onClick>x</button>
+                <button className='exitButton'>x</button>
             </div>
             <div className='align' >
                 <h1>Spelregler</h1>

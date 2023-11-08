@@ -1,32 +1,38 @@
-.rulesDiv{
+.rulesDiv {
     background-color: #FFC957;
-    width: 290px;
-    height: 400px;
+    width: 320px;
+    height: 500px;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
     align-items: center;
     margin: auto;
-   
-   
+
+
 }
 
-.alignRight{
+.alignRight {
     display: flex;
-    align-items: right;
     justify-content: right;
 }
-.align{
+
+.align {
     text-align: center;
     display: flex;
     flex-direction: column;
-    
+
+
 }
 
-.exitButton{
-    align-items: right;
+.exitButton {
     border-radius: 50px;
     background-color: #F55757;
-    font-size: 50px;
-    
+    font-size: 75px;
+    width: 85px;
+    height: 85px;
+    border: 2px solid #02182B;
+}
+
+.exitButton:active {
+    background-color: #dc4e4e;
 }
