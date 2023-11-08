@@ -1,5 +1,6 @@
 import React from 'react';
 import challengesJson from './../challenges.json';
+import '../styles/Competition.css';
 
 const Competition = () => {
 
