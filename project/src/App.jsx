@@ -8,6 +8,7 @@ function App() {
   <div className="app_big_div"> 
     <Competition/>
   </div>
+  
   )
 }
 
