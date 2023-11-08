@@ -1,34 +1,15 @@
-import AddPlayer from './components/AddPlayer'
-import menu from './components/menu'
-import './App.css'
 import React, { useState } from 'react';
+import './App.css'
+import Menu from './components/Menu'
+
+
 
 function App() {
-
-  const [players, setPlayers] = useState([]);
-
-  const addingPlayer = (newPlayer) => {
-    setPlayers([players, newPlayer]);
-  };
-
-  return (
-  <div className="app_big_div"> 
-    <h1>Lägg till spelare</h1>
-    <AddPlayer onAdd={addingPlayer} />
-      <div>
-        <ul>
-          {players.map((player, index) => (
-            <li key={index}>{player}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="cssmenu">
-        <menu/>
-      </div>
-    
-  </div>
+  return(
+    <div className='app_big_div'>
+      <menu/>
+    </div>
   )
-}
+  }
 
 export default App

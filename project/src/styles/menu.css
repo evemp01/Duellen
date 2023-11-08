@@ -1,0 +1,25 @@
+
+
+.alignRight{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+.aligncenter{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.exitButton{
+    align-items: right;
+    border-radius: 50px;
+    background-color: #F55757;
+    font-size: 50px;
+    
+}
+
+.editPlayer{
+    background-color: beige;
+}
