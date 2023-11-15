@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddPlayer from "./components/AddPlayer";
 import Competition from "./components/Competition";
 import "./App.css";
+import Rules from "./components/Rules";
+import Who_won from "./components/Who_won";
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -10,6 +12,8 @@ function App() {
     <BrowserRouter>
       <div className="app_big_div">
         <Routes>
+          <Route path="/Rules" element={<Rules />} />
+          <Route path="/Who_won" element={<Who_won />} />
           <Route
             path="/"
             element={<AddPlayer setPlayers={setPlayers} players={players} />}
