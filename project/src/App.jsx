@@ -1,21 +1,27 @@
-import { ReactDOM } from 'react-dom/client';
-import {BrowserRouter,Routes,Route} from "react-router-dom";
-import AddPlayer from './components/AddPlayer'
-import './App.css'
-import React from 'react';
-import Rules from './components/Rules'
-import Who_won from './components/Who_won'
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddPlayer from "./components/AddPlayer";
+import Competition from "./components/Competition";
+import "./App.css";
+
 function App() {
+  const [players, setPlayers] = useState([]);
   return (
-  <div className="app_big_div"> 
-  <BrowserRouter>
-  <Routes>
-    <Route path="/Rules" element={<Rules/>}/>
-    <Route path="/Who_won" element={<Who_won/>}/>
-  </Routes>
-  </BrowserRouter>
-  </div>
-  )
+    <BrowserRouter>
+      <div className="app_big_div">
+        <Routes>
+          <Route
+            path="/"
+            element={<AddPlayer setPlayers={setPlayers} players={players} />}
+          />
+          <Route
+            path="/competition"
+            element={<Competition players={players} />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
