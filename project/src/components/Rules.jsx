@@ -1,17 +1,16 @@
 import '../styles/Rules.css'
-import { ReactDOM } from 'react-dom/client';
 import { Link } from 'react-router-dom';
 
 const Rules = () => {
     return (
         <div>
-            
+
             <div className='alignRight'>
-            <Link to={"/"} >
-                <button className='exitButton'>x</button>
+                <Link to={"/"} >
+                    <button className='exitButton'>x</button>
                 </Link>
             </div>
-           
+
             <div className='align' >
                 <h1>Spelregler</h1>
                 <div className='rulesDiv'>
