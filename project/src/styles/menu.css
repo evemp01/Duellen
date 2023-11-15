@@ -13,15 +13,14 @@
 
 .exitButton{
  
-  margin-left: 85%;
-    border-radius: 50%;
-    background-color: #F55757;
+    border-radius: 50px;
+    background-color: #F55757;;
     font-size: 50px;
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-bottom: 5px;
-    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.8);
-    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 75px;
+    height: 75px;
+    border: 2px solid #02182B;
+    margin-left: 80%;
 
    
 }
