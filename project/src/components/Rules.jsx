@@ -1,10 +1,12 @@
 import '../styles/Rules.css'
-
+import {Link} from 'react-router-dom';
 const Rules = () => {
     return (
         <div>
             <div className='alignRight'>
-                <button className='exitButton' onClick>x</button>
+                <Link to={"/"}>
+                <button className='exitButton' >x</button>
+                </Link>
             </div>
             <div className='align' >
                 <h1>Spelregler</h1>

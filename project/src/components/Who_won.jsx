@@ -1,9 +1,12 @@
 import '../styles/Who_won.css'
+import {Link} from 'react-router-dom';
 const Who_won = () => {
     return (
         <div>
             <div className='align_menu_help'>
+                <Link to={"/Rules"}>
                 <button className='helpButton'>?</button>
+                </Link>
                 <button className='menuButton'>≡</button>
             </div>
             <div className='align' >
