@@ -1,27 +1,19 @@
+import { ReactDOM } from 'react-dom/client';
+import {BrowserRouter,Routes,Route} from "react-router-dom";
 import AddPlayer from './components/AddPlayer'
 import './App.css'
-import React, { useState } from 'react';
-
+import React from 'react';
+import Rules from './components/Rules'
+import Who_won from './components/Who_won'
 function App() {
-
-  const [players, setPlayers] = useState([]);
-
-  const addingPlayer = (newPlayer) => {
-    setPlayers([players, newPlayer]);
-  };
-
   return (
   <div className="app_big_div"> 
-    <h1>Lägg till spelare</h1>
-    <AddPlayer onAdd={addingPlayer} />
-      <div>
-        <ul>
-          {players.map((player, index) => (
-            <li key={index}>{player}</li>
-          ))}
-        </ul>
-      </div>
-    
+  <BrowserRouter>
+  <Routes>
+    <Route path="/Rules" element={<Rules/>}/>
+    <Route path="/Who_won" element={<Who_won/>}/>
+  </Routes>
+  </BrowserRouter>
   </div>
   )
 }
