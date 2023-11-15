@@ -4,7 +4,7 @@ const Rules = () => {
     return (
         <div>
             <div className='alignRight'>
-                <Link to={"/"}>
+                <Link to={"/Who_won"}>
                 <button className='exitButton' >x</button>
                 </Link>
             </div>

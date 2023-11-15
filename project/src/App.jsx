@@ -11,7 +11,7 @@ function App() {
   <BrowserRouter>
   <Routes>
     <Route path="/Rules" element={<Rules/>}/>
-    <Route path="/" element={<Who_won/>}/>
+    <Route path="/Who_won" element={<Who_won/>}/>
   </Routes>
   </BrowserRouter>
   </div>
