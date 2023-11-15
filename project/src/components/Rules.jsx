@@ -6,7 +6,7 @@ const Rules = () => {
         <div>
 
             <div className='alignRight'>
-                <Link to={"/"} >
+                <Link to={"/addPlayer"} >
                     <button className='exitButton'>x</button>
                 </Link>
             </div>
