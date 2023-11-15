@@ -1,22 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AddPlayer from './components/AddPlayer';
-import Competition from './components/Competition';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddPlayer from "./components/AddPlayer";
+import Competition from "./components/Competition";
+import "./App.css";
 
 function App() {
-
+  const [players, setPlayers] = useState([]);
   return (
-    <Router>
-    <div className="app_big_div">
-      <Switch>
-        <Route path="/" exact component={AddPlayer} />
-        <Route path="/competition" component={Competition} />
-      </Switch>
-    </div>
-  </Router>
-  
+    <BrowserRouter>
+      <div className="app_big_div">
+        <Routes>
+          <Route
+            path="/"
+            element={<AddPlayer setPlayers={setPlayers} players={players} />}
+          />
+          <Route
+            path="/competition"
+            element={<Competition players={players} />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;
