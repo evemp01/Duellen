@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import challengesJson from "./../challenges.json";
 import "../styles/Competition.css";
 import { Link } from "react-router-dom";

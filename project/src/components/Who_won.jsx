@@ -7,8 +7,9 @@ const Who_won = () => {
         <Link to={"/Rules"}>
           <button className="helpButton">?</button>
         </Link>
-
-        <button className="menuButton">≡</button>
+        <Link to={"/Rules"}>
+          <button className="menuButton">≡</button>
+        </Link>
       </div>
       <div className="align">
         <h1>Vem vann?</h1>
