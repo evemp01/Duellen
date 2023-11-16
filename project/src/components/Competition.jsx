@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import challengesJson from "./../challenges.json";
 import "../styles/Competition.css";
 import { Link } from "react-router-dom";
@@ -35,6 +35,12 @@ const Competition = ({ players }) => {
   // const handleNavigation = useCallback(() => {
   //   navigation("/Who_won");
   // }, [navigation]);
+  useEffect(() => {
+    // Store random players' information in local storage
+    localStorage.setItem("randomPlayer1", players[randomPlayer1]);
+    localStorage.setItem("randomPlayer2", players[randomPlayer2]);
+  }, [players, randomPlayer1, randomPlayer2]);
+
   return (
     <div className="Competition">
       <div id="playerOne">
