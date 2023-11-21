@@ -6,7 +6,7 @@ const AddPlayer = ({ players, setPlayers }) => {
   const navigation = useNavigate();
   const [newPlayer, setNewPlayer] = useState("");
   const playerLimit = 10;
-  const minPlayers = 2;
+  const minPlayers = 3;
   console.log(players);
   const handleInputChange = (event) => {
     setNewPlayer(event.target.value);
@@ -56,7 +56,7 @@ const AddPlayer = ({ players, setPlayers }) => {
       </div>
       <div>
         {minPlayers > players.length && (
-          <p>Lägg till minst 2 stycken spelare</p>
+          <p>Lägg till minst 3 stycken spelare</p>
         )}
         <button
           onClick={() => {

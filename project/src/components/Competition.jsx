@@ -11,9 +11,9 @@ const randomPlayers = (players) => {
   let randPlayer2 = "";
 
   const randPlayer = rand(minPlayer, maxPlayer);
-  for (let i = 0; i < players.length; ++i) {
+  for (let i = 0; i < 100; ++i) {
     let temp = rand(minPlayer, maxPlayer);
-    if (randPlayer2 != randPlayer) {
+    if (temp != randPlayer) {
       randPlayer2 = temp;
       break;
     }
