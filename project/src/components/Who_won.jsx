@@ -5,10 +5,10 @@ const Who_won = () => {
   const player2 = localStorage.getItem("randomPlayer2");
 
   //onClick={goBack}
-    const navigate = useNavigate();
-    const goBack = () => {
-      navigate(-1);
-    }
+    // const navigate = useNavigate();
+    // const goBack = () => {
+    //   navigate(-1);
+    // }
   
   return (
     <div>
@@ -24,9 +24,13 @@ const Who_won = () => {
         <h1>Vem vann?</h1>
         <Link to={"/competition"}>
         <button className="player1Button"> 
+        
           <p>{player1}</p>
+          
         </button>
+        </Link>
         <h1>eller</h1>
+        <Link to={"/competition"}>
         <button className="player2Button">
           <p>{player2}</p>
         </button>
