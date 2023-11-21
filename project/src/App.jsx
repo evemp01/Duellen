@@ -1,29 +1,15 @@
-import AddPlayer from './components/AddPlayer'
-import './App.css'
-import React, { useState } from 'react';
+// App.jsx
 
-function App() {
+import React from 'react';
+import TopList from './TopList';
 
-  const [players, setPlayers] = useState([]);
-
-  const addingPlayer = (newPlayer) => {
-    setPlayers([players, newPlayer]);
-  };
-
+const App = () => {
   return (
-  <div className="app_big_div"> 
-    <h1>Lägg till spelare</h1>
-    <AddPlayer onAdd={addingPlayer} />
-      <div>
-        <ul>
-          {players.map((player, index) => (
-            <li key={index}>{player}</li>
-          ))}
-        </ul>
-      </div>
-    
-  </div>
-  )
+    <div>
+      <TopList />
+    </div>
+  );
 }
 
-export default App
+export default App;
+
