@@ -1,4 +1,22 @@
-:root{
-    background-color: #F3DFA2;
-    font-family: 'Wendy One', sans-serif;
-}
+/* App.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
