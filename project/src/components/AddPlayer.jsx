@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AddPlayer.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const AddPlayer = ({ players, setPlayers }) => {
   const navigation = useNavigate();
@@ -25,6 +25,12 @@ const AddPlayer = ({ players, setPlayers }) => {
   };
 
   return (
+    <>
+      <div className="align_menu_help">
+        <Link to={"/Rules"}>
+          <button className="helpButton">?</button>
+        </Link>
+      </div>
     <div className="addPlayer">
       <h1>Lägg till spelare</h1>
       <div>
@@ -70,6 +76,7 @@ const AddPlayer = ({ players, setPlayers }) => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

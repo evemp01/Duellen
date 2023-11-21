@@ -1,16 +1,13 @@
 import "../styles/menu.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Menu = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="alignright">
-        <Link to={"/Who_won"}>
-          <button className="exitButton" onClick={() => {}}>
-            x
-          </button>
-        </Link>
+      <button className='exitButton' onClick={() => navigate(-1)}>x</button>
       </div>
       <div className="aligncenter">
         <button className="editPlayer" onClick={() => {}}>

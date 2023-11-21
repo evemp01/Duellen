@@ -43,6 +43,14 @@ const Competition = ({ players }) => {
 
   return (
     <div className="Competition">
+      <div className="align_menu_help">
+      <Link to={"/Rules"}>
+        <button className="helpButton">?</button>
+      </Link>
+      <Link to={"/menu"}>
+        <button className="menuButton">≡</button>
+      </Link>
+      </div>
       <div id="playerOne">
         <p>{players[randomPlayer1]}</p>
       </div>
