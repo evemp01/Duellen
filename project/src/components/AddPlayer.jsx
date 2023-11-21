@@ -5,16 +5,22 @@ import { useNavigate } from "react-router-dom";
 const AddPlayer = ({ players, setPlayers }) => {
   const navigation = useNavigate();
   const [newPlayer, setNewPlayer] = useState("");
-  const playerLimit = 10;
+  const playerLimit = 11;
   const minPlayers = 3;
-  console.log(players);
   const handleInputChange = (event) => {
     setNewPlayer(event.target.value);
   };
 
   const handleAddPlayer = () => {
     if (newPlayer !== "" && players.length < playerLimit) {
-      setPlayers([...players, newPlayer]);
+      setPlayers([
+        ...players,
+        {
+          name: newPlayer,
+          winsCounter: 0,
+          drinksCounter: 0,
+        },
+      ]);
       setNewPlayer("");
     }
   };
@@ -48,7 +54,7 @@ const AddPlayer = ({ players, setPlayers }) => {
         <ul>
           {players.map((player, index) => (
             <li key={index}>
-              {player}
+              {player.name}
               <button onClick={() => handleDeletePlayer(index)}>-</button>
             </li>
           ))}

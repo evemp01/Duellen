@@ -8,17 +8,13 @@ import { Link } from "react-router-dom";
 const randomPlayers = (players) => {
   const minPlayer = 0;
   const maxPlayer = players.length - 1;
-  let randPlayer2 = "";
 
-  const randPlayer = rand(minPlayer, maxPlayer);
-  for (let i = 0; i < 100; ++i) {
-    let temp = rand(minPlayer, maxPlayer);
-    if (temp != randPlayer) {
-      randPlayer2 = temp;
-      break;
-    }
+  let randPlayer = rand(minPlayer, maxPlayer);
+  let randPlayer2 = rand(minPlayer, maxPlayer);
+
+  while (randPlayer2 === randPlayer) {
+    randPlayer2 = rand(minPlayer, maxPlayer);
   }
-  console.log(randPlayer, randPlayer2);
   return [randPlayer, randPlayer2];
 };
 
@@ -37,18 +33,24 @@ const Competition = ({ players }) => {
   // }, [navigation]);
   useEffect(() => {
     // Store random players' information in local storage
-    localStorage.setItem("randomPlayer1", players[randomPlayer1]);
-    localStorage.setItem("randomPlayer2", players[randomPlayer2]);
+    localStorage.setItem(
+      "randomPlayer1",
+      JSON.stringify(players[randomPlayer1])
+    );
+    localStorage.setItem(
+      "randomPlayer2",
+      JSON.stringify(players[randomPlayer2])
+    );
   }, [players, randomPlayer1, randomPlayer2]);
 
   return (
     <div className="Competition">
       <div id="playerOne">
-        <p>{players[randomPlayer1]}</p>
+        <p>{players[randomPlayer1].name}</p>
       </div>
       <h1 id="VS">VS</h1>
       <div id="playerTwo">
-        <p>{players[randomPlayer2]}</p>
+        <p>{players[randomPlayer2].name}</p>
       </div>
       <div className="utmaning">
         <p>{challengesJson.allChallenges[randChallenge].challenge}</p>

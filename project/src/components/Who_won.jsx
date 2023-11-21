@@ -1,8 +1,8 @@
 import "../styles/Who_won.css";
 import { Link } from "react-router-dom";
 const Who_won = () => {
-  const player1 = localStorage.getItem("randomPlayer1");
-  const player2 = localStorage.getItem("randomPlayer2");
+  const player1 = JSON.parse(localStorage.getItem("randomPlayer1"));
+  const player2 = JSON.parse(localStorage.getItem("randomPlayer2"));
 
   return (
     <div>
@@ -17,11 +17,11 @@ const Who_won = () => {
       <div className="align">
         <h1>Vem vann?</h1>
         <button className="player1Button">
-          <p>{player1}</p>
+          <p>{player1.name}</p>
         </button>
         <h1>eller</h1>
         <button className="player2Button">
-          <p>{player2}</p>
+          <p>{player2.name}</p>
         </button>
       </div>
     </div>
