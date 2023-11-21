@@ -5,10 +5,7 @@ const Rules = () => {
     return (
         <div>
             <div className='alignRight'>
-            <button className='exitButton' onClick={() => navigate(-1)}>x</button>
-                {/* <Link to={"/Who_won"}>
-                <button className='exitButton' >x</button>
-                </Link> */}
+                <button className='exitButton' onClick={() => navigate(-1)}>x</button>
             </div>
             <div className='align' >
                 <h1>Spelregler</h1>

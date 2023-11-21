@@ -9,11 +9,11 @@ const Menu = () => {
       <div className="alignright">
       <button className='exitButton' onClick={() => navigate(-1)}>x</button>
       </div>
-      <div className="aligncenter">
-        <button className="editPlayer" onClick={() => {}}>
-          Redigera spelare
-        </button>
-      </div>
+      <Link to={"/EditPlayer"}>
+        <div className="aligncenter">
+          <button className="editPlayer">Redigera spelare</button>
+        </div>
+      </Link>
       <div className="aligncenter">
         <button className="toplist" onClick={() => {}}>
           Topplista
