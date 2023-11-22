@@ -48,10 +48,10 @@ const EditPlayer = ({ players, setPlayers }) => {
         <div>
           <ul>
             {players.map((player, index) => (
-              <li key={index}>
+              <p key={index}>
                 {player}
                 <button onClick={() => handleDeletePlayer(index)}>-</button>
-              </li>
+              </p>
             ))}
           </ul>
         </div>
