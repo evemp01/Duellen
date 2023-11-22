@@ -1,0 +1,11 @@
+.nextButton{
+    border-radius: 30px;
+    background-color: #7FD16A;
+    height: 60px;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 30px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-color:  #02182B;
+    padding: 0px 25px;
+
+}

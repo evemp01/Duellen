@@ -42,28 +42,30 @@ const Competition = ({ players }) => {
   }, [players, randomPlayer1, randomPlayer2]);
 
   return (
-    <div className="Competition">
-      <div className="align_menu_help">
-      <Link to={"/Rules"}>
-        <button className="helpButton">?</button>
-      </Link>
-      <Link to={"/menu"}>
-        <button className="menuButton">≡</button>
-      </Link>
+    <div>
+    <div className="align_menu_help">
+        <Link to={"/Rules"}>
+          <button className="helpButton">?</button>
+        </Link>
+        <Link to={"/menu"}>
+          <button className="menuButton">≡</button>
+        </Link>
       </div>
-      <div id="playerOne">
+    <div className="align">
+      <div className="player1Button" id="playerOne">
         <p>{players[randomPlayer1]}</p>
       </div>
       <h1 id="VS">VS</h1>
-      <div id="playerTwo">
+      <div className="player2Button" id="playerTwo">
         <p>{players[randomPlayer2]}</p>
       </div>
-      <div className="utmaning">
+      <div className="rulesDiv">
         <p>{challengesJson.allChallenges[randChallenge].challenge}</p>
       </div>
       <Link to={"/Who_won"}>
-        <button /*onClick={handleNavigation}*/ className="next">Nästa</button>
+        <button /*onClick={handleNavigation}*/ className="nextButton">Nästa</button>
       </Link>
+    </div>
     </div>
   );
 };
