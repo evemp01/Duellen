@@ -1,17 +1,89 @@
 .addPlayer{
     background-color: #FFC957;
     width: 290px;
-    height: 400px;
+    height: 35em;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
     margin: auto;
+    margin-top: 10px;
+    padding: 10px;
 }
 .roundedCorners{
-    border-radius: 10px;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 25px;
+    width: 230px;
+    height: 35px;
+    font-family: 'Wendy One', sans-serif;
+    border: none;
+}
+.plus{
+border-radius: 20px 20px 20px 20px;
+font-family: 'Wendy One', sans-serif;
+font-size: 25px;
+height: 38px;
+width: 40px;
+background-color: #7FD16A; 
+box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+.minus{
+    background-color:#f55757;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 20px;
+    width: 34px;
+    border-radius: 20px 20px 20px 20px;
+    height: 34px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: auto;
+}
+.scrollbar{
+    overflow-y: auto;
+    max-height: 22em;
+    background-color: #f2c054;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.inputField{
+    border-radius: 20px;
+    background-color: white;
+    width: 274px;
+    align-content: center;
+    margin-left: 0.7em;
+}
+.listofPlayers{
+    display: flex;
+    font-size: 30px;
+    background-color: #f3dfa2;
+    border-radius: 20px 20px;
+    height: 34px;
+    margin-right: 0.5em;
+    margin-left:-0.5em;
+    padding-left: 0.5em;
+    
 }
 
-Button{
+.message{
+    font-size: 20px;
+}
+
+.start{
+    font-size: 40px;
+    border-radius: 50px;
+    font-family: 'Wendy One', sans-serif;
+    margin-top: 10px;
+    background-color: #7FD16A;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.backtoGame{
+    font-family: 'Wendy One', sans-serif;
+    font-size: 25px;
+    padding: 0.2em;
+    margin-top: 10px;
     border-radius: 20px;
     background-color: #7FD16A;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.align_menu_help{
+    font-family: 'Wendy One', sans-serif;
+    
 }

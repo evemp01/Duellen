@@ -33,7 +33,7 @@ const AddPlayer = ({ players, setPlayers }) => {
       </div>
     <div className="addPlayer">
       <h1>Lägg till spelare</h1>
-      <div>
+      <div className="inputField">
         <input
           className="roundedCorners"
           type="text"
@@ -42,7 +42,7 @@ const AddPlayer = ({ players, setPlayers }) => {
           placeholder=""
           disabled={playerLimit <= players.length}
         />
-        <button
+        <button className="plus"
           onClick={handleAddPlayer}
           disabled={playerLimit <= players.length}
         >
@@ -50,21 +50,21 @@ const AddPlayer = ({ players, setPlayers }) => {
         </button>
         {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
       </div>
-      <div>
+      <div className="scrollbar">
         <ul>
           {players.map((player, index) => (
-            <li key={index}>
+            <p className="listofPlayers" key={index}>
               {player}
-              <button onClick={() => handleDeletePlayer(index)}>-</button>
-            </li>
+              <button className="minus" onClick={() => handleDeletePlayer(index)}>-</button>
+            </p>
           ))}
         </ul>
       </div>
       <div>
         {minPlayers > players.length && (
-          <p>Lägg till minst 3 stycken spelare</p>
+          <p className="message">Lägg till minst 3 stycken spelare</p>
         )}
-        <button
+        <button className="start"
           onClick={() => {
             if (minPlayers <= players.length) {
               navigation("/competition");
