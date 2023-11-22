@@ -5,6 +5,7 @@
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
+    margin: auto;
 }
 .roundedCorners{
     border-radius: 10px;
