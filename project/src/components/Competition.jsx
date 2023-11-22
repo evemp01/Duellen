@@ -27,21 +27,15 @@ const Competition = ({ players }) => {
   const minChallenge = 0;
   const maxChallenge = challengesJson.allChallenges.length - 1;
   const randChallenge = rand(minChallenge, maxChallenge);
-  const [randomPlayer1, randomPlayer2] = randomPlayers(players);
+  let [randomPlayer1, randomPlayer2] = randomPlayers(players);
   // const handleNavigation = useCallback(() => {
   //   navigation("/Who_won");
   // }, [navigation]);
   useEffect(() => {
     // Store random players' information in local storage
-    localStorage.setItem(
-      "randomPlayer1",
-      JSON.stringify(players[randomPlayer1])
-    );
-    localStorage.setItem(
-      "randomPlayer2",
-      JSON.stringify(players[randomPlayer2])
-    );
-  }, [players, randomPlayer1, randomPlayer2]);
+    localStorage.setItem("randomPlayer1", randomPlayer1);
+    localStorage.setItem("randomPlayer2", randomPlayer2);
+  }, []);
 
   return (
     <div className="Competition">

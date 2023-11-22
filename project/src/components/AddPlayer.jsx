@@ -5,10 +5,18 @@ import { useNavigate } from "react-router-dom";
 const AddPlayer = ({ players, setPlayers }) => {
   const navigation = useNavigate();
   const [newPlayer, setNewPlayer] = useState("");
-  const playerLimit = 11;
+  const playerLimit = 21;
   const minPlayers = 3;
   const handleInputChange = (event) => {
     setNewPlayer(event.target.value);
+  };
+
+  const savePlayers = (players) => {
+    localStorage.setItem("players", JSON.stringify(players));
+
+    if (minPlayers <= players.length) {
+      navigation("/competition");
+    }
   };
 
   const handleAddPlayer = () => {
@@ -42,10 +50,7 @@ const AddPlayer = ({ players, setPlayers }) => {
           placeholder=""
           disabled={playerLimit <= players.length}
         />
-        <button
-          onClick={handleAddPlayer}
-          disabled={playerLimit <= players.length}
-        >
+        <button onClick={handleAddPlayer} disabled={playerLimit <= players.length}>
           +
         </button>
         {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
@@ -61,17 +66,8 @@ const AddPlayer = ({ players, setPlayers }) => {
         </ul>
       </div>
       <div>
-        {minPlayers > players.length && (
-          <p>Lägg till minst 3 stycken spelare</p>
-        )}
-        <button
-          onClick={() => {
-            if (minPlayers <= players.length) {
-              navigation("/competition");
-            }
-          }}
-          disabled={minPlayers > players.length}
-        >
+        {minPlayers > players.length && <p>Lägg till minst 3 stycken spelare</p>}
+        <button onClick={() => savePlayers(players)} disabled={minPlayers > players.length}>
           Start
         </button>
       </div>

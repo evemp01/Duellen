@@ -15,15 +15,9 @@ function App() {
         <Routes>
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Rules" element={<Rules />} />
-          <Route path="/Who_won" element={<Who_won />} />
-          <Route
-            path="/"
-            element={<AddPlayer setPlayers={setPlayers} players={players} />}
-          />
-          <Route
-            path="/competition"
-            element={<Competition players={players} />}
-          />
+          <Route path="/Who_won" element={<Who_won players={players} />} />
+          <Route path="/" element={<AddPlayer setPlayers={setPlayers} players={players} />} />
+          <Route path="/competition" element={<Competition players={players} />} />
         </Routes>
       </div>
     </BrowserRouter>
