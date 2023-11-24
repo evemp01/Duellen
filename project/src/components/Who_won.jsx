@@ -4,8 +4,8 @@ const Who_won = ({ players }) => {
   let player1 = localStorage.getItem("randomPlayer1");
   let player2 = localStorage.getItem("randomPlayer2");
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
-
-  // Use state to get for this game add to wincounter in players
+  console.log(storedPlayers[player1]);
+  console.log(storedPlayers[player2]);
 
   const AddPoints = (e) => {
     if (e == players[player1].name) {
