@@ -41,13 +41,13 @@ const Who_won = ({ players }) => {
       </div>
       <div className="align">
         <h1>Vem vann?</h1>
-        <Link to={"/Competition"}>
+        <Link className = "bothPlayers" to={"/Competition"}>
           <button className="bothPlayers" id="playerOneClickable" value={players[player1].name} onClick={(e) => AddPoints(e.target.value)}>
             <p>{players[player1].name}</p>
           </button>
         </Link>
         <h1>eller</h1>
-        <Link to={"/Competition"}>
+        <Link className = "bothPlayers" to={"/Competition"}>
           <button className="bothPlayers" id="playerTwoClickable" value={players[player2].name} onClick={(e) => AddPoints(e.target.value)}>
             <p>{players[player2].name}</p>
           </button>

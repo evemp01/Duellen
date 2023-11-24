@@ -47,7 +47,7 @@
   background-color: #0197f6;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.playerOneClickable:active {
+#playerOneClickable:active {
   background-color: #0187dd;
 }
 
@@ -57,10 +57,9 @@
 }
 #playerTwoClickable{
   background-color: #f55757;
-  margin-bottom: 50px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.playerTwoClickable:active {
+#playerTwoClickable:active {
   background-color: #dc4e4e;
 }
 
