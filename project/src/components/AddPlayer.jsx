@@ -71,12 +71,12 @@ const AddPlayer = ({ players, setPlayers }) => {
             ))}
           </ul>
         </div>
+        </div>
         <div>
           {minPlayers > players.length && <p className="message">Lägg till minst 3 spelare</p>}
           <button className="start" onClick={() => savePlayers(players)} disabled={minPlayers > players.length}>
             Start
           </button>
-        </div>
       </div>
     </>
   );
