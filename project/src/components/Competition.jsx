@@ -52,14 +52,14 @@ const Competition = ({ players }) => {
         </Link>
       </div>
     <div className="align">
-      <div className="player1Button" id="playerOne">
+      <div className="bothPlayers" id="playerOne">
         <p>{players[randomPlayer1]}</p>
       </div>
       <h1 id="VS">VS</h1>
-      <div className="player2Button" id="playerTwo">
+      <div className="bothPlayers" id="playerTwo">
         <p>{players[randomPlayer2]}</p>
       </div>
-      <div className="rulesDiv">
+      <div className="challenge">
         <p>{challengesJson.allChallenges[randChallenge].challenge}</p>
       </div>
       <Link to={"/Who_won"}>

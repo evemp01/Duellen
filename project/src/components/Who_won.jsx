@@ -23,15 +23,13 @@ const Who_won = () => {
       <div className="align">
         <h1>Vem vann?</h1>
         <Link to={"/competition"}>
-        <button className="player1Button"> 
-        
+        <button className="bothPlayers" id="playerOneClickable"> 
           <p>{player1}</p>
-          
         </button>
         </Link>
         <h1>eller</h1>
         <Link to={"/competition"}>
-        <button className="player2Button">
+        <button className="bothPlayers" id="playerTwoClickable">
           <p>{player2}</p>
         </button>
         </Link>

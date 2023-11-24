@@ -1,3 +1,8 @@
+.align_menu_help {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .helpButton,
 .menuButton {
   border-radius: 50px;
@@ -8,54 +13,63 @@
   height: 75px;
   border: 2px solid #02182b;
 }
-
 .helpButton:active,
 .menuButton:active {
   background-color: #cca045;
 }
-.playerText {
-  font-family: "Wendy One", sans-serif;
-  font-size: 35px;
-}
-.player1Button {
-  border-radius: 15px;
-  background-color: #0197f6;
-  height: 60px;
-  font-family: "Wendy One", sans-serif;
-  font-size: 30px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: none;
-  padding: 0px 60px;
-  margin: 0px 30px;
-}
-.player1Button:active {
-  background-color: #0187dd;
-}
 
-.player2Button {
-  border-radius: 15px;
-  background-color: #f55757;
-  height: 60px;
-  font-family: "Wendy One", sans-serif;
-  font-size: 30px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: none;
-  padding: 0px 60px;
-  margin: 0px 30px;
-  margin-bottom: 50px;
-}
-.player2Button:active {
-  background-color: #dc4e4e;
-}
-
-.align_menu_help {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .align {
-  text-align: center;
   display: flex;
   flex-direction: column;
   margin-top: 100px;
+}
+
+.bothPlayers{
+  height: 60px;
+  font-family: "Wendy One", sans-serif;
+  font-size: 30px;
+  border-radius: 15px;
+  border: none;
+  margin: 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playerOne {
+  background-color: #0197f6;
+}
+#playerOneClickable{
+  background-color: #0197f6;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.playerOneClickable:active {
+  background-color: #0187dd;
+}
+
+#playerTwo {
+  background-color: #f55757;
+  margin-bottom: 50px;
+}
+#playerTwoClickable{
+  background-color: #f55757;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.playerTwoClickable:active {
+  background-color: #dc4e4e;
+}
+
+.challenge{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFC957;
+  height: 220px;
+  border-radius: 25px;
+  font-family: 'Wendy One', sans-serif;
+  font-size: 30px;
+  margin: 0px 30px;
+  margin-bottom: 30px;
+  padding: 25px;
 }
