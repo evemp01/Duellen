@@ -6,6 +6,7 @@ import "./App.css";
 import Rules from "./components/Rules";
 import Who_won from "./components/Who_won";
 import Menu from "./components/menu";
+import TopList from "./components/TopList";
 
 function App() {
   const [players, setPlayers] = useState([]);
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Who_won" element={<Who_won players={players} />} />
           <Route path="/" element={<AddPlayer setPlayers={setPlayers} players={players} />} />
           <Route path="/competition" element={<Competition players={players} />} />
+          <Route path="/TopList" />
         </Routes>
       </div>
     </BrowserRouter>
