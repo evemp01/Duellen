@@ -4,8 +4,16 @@ const Who_won = ({ players }) => {
   let player1 = localStorage.getItem("randomPlayer1");
   let player2 = localStorage.getItem("randomPlayer2");
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
-  console.log(storedPlayers[player1]);
-  console.log(storedPlayers[player2]);
+
+  // console.log(storedPlayers[player1]);
+  // console.log(storedPlayers[player2]);
+  if (storedPlayers[player1] === undefined || storedPlayers[player2] === undefined) {
+    player1 = 1;
+    player2 = 2;
+  }
+  // console.log(storedPlayers[player1]);
+  // console.log(storedPlayers[player2]);
+  // console.log(storedPlayers);
 
   const AddPoints = (e) => {
     if (e == players[player1].name) {
@@ -24,11 +32,11 @@ const Who_won = ({ players }) => {
   console.log(localStorage.players);
 
   //onClick={goBack}
-    // const navigate = useNavigate();
-    // const goBack = () => {
-    //   navigate(-1);
-    // }
-  
+  // const navigate = useNavigate();
+  // const goBack = () => {
+  //   navigate(-1);
+  // }
+
   return (
     <div>
       <div className="align_menu_help">
@@ -42,13 +50,23 @@ const Who_won = ({ players }) => {
       <div className="align">
         <h1>Vem vann?</h1>
         <Link to={"/Competition"}>
-          <button className="bothPlayers" id="playerOneClickable" value={players[player1].name} onClick={(e) => AddPoints(e.target.value)}>
+          <button
+            className="bothPlayers"
+            id="playerOneClickable"
+            value={players[player1].name}
+            onClick={(e) => AddPoints(e.target.value)}
+          >
             <p>{players[player1].name}</p>
           </button>
         </Link>
         <h1>eller</h1>
         <Link to={"/Competition"}>
-          <button className="bothPlayers" id="playerTwoClickable" value={players[player2].name} onClick={(e) => AddPoints(e.target.value)}>
+          <button
+            className="bothPlayers"
+            id="playerTwoClickable"
+            value={players[player2].name}
+            onClick={(e) => AddPoints(e.target.value)}
+          >
             <p>{players[player2].name}</p>
           </button>
         </Link>
