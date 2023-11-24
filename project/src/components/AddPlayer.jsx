@@ -60,11 +60,15 @@ const AddPlayer = ({ players, setPlayers }) => {
           ))}
         </ul>
       </div>
-      <div>
+
+    </div>
+    <div>
         {minPlayers > players.length && (
-          <p className="message">Lägg till minst 3 stycken spelare</p>
+          <p className="message">Lägg till minst 3 spelare</p>
         )}
-        <button className="start"
+        
+      </div>
+    <button className="start"
           onClick={() => {
             if (minPlayers <= players.length) {
               navigation("/competition");
@@ -74,8 +78,6 @@ const AddPlayer = ({ players, setPlayers }) => {
         >
           Start
         </button>
-      </div>
-    </div>
     </>
   );
 };

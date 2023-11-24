@@ -1,12 +1,23 @@
 .addPlayer{
     background-color: #FFC957;
     width: 290px;
-    height: 35em;
+    height: 30em;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
     margin: auto;
     margin-top: 10px;
+    padding: 10px;
+}
+.editPlayer_sida{
+    background-color: #FFC957;
+    width: 290px;
+    height: 32em;
+    border-radius: 25px;
+    font-family: 'Wendy One', sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
     padding: 10px;
 }
 .roundedCorners{
@@ -64,26 +75,28 @@ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 .message{
     font-size: 20px;
+    text-align: center;
 }
 
 .start{
-    font-size: 40px;
+    font-size: 60px;
     border-radius: 50px;
     font-family: 'Wendy One', sans-serif;
-    margin-top: 10px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
     background-color: #7FD16A;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .backtoGame{
     font-family: 'Wendy One', sans-serif;
-    font-size: 25px;
+    font-size: 33px;
     padding: 0.2em;
-    margin-top: 10px;
-    border-radius: 20px;
+    margin-top: 70px;
+    border-radius: 50px;
     background-color: #7FD16A;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .align_menu_help{
     font-family: 'Wendy One', sans-serif;
-    
 }

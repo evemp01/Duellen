@@ -26,7 +26,7 @@ const EditPlayer = ({ players, setPlayers }) => {
   
     return (
       <>
-        <div className="addPlayer">
+        <div className="editPlayer_sida">
         <h1>Redigera spelare</h1>
         <div className = "inputField">
           <input
