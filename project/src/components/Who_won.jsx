@@ -1,8 +1,27 @@
 import "../styles/Who_won.css";
-import { Link, useNavigate } from "react-router-dom";
-const Who_won = () => {
-  const player1 = localStorage.getItem("randomPlayer1");
-  const player2 = localStorage.getItem("randomPlayer2");
+import { Link } from "react-router-dom";
+const Who_won = ({ players }) => {
+  let player1 = localStorage.getItem("randomPlayer1");
+  let player2 = localStorage.getItem("randomPlayer2");
+  let storedPlayers = JSON.parse(localStorage.getItem("players"));
+  console.log(storedPlayers[player1]);
+  console.log(storedPlayers[player2]);
+
+  const AddPoints = (e) => {
+    if (e == players[player1].name) {
+      storedPlayers[player1].winsCounter = storedPlayers[player1].winsCounter + 1;
+      localStorage.setItem("players", JSON.stringify(storedPlayers));
+
+      // console.log(player1.winsCounter);
+      // console.log(player1.winsCounter + player1.name);
+    } else {
+      storedPlayers[player2].winsCounter = storedPlayers[player2].winsCounter + 1;
+      localStorage.setItem("players", JSON.stringify(storedPlayers));
+
+      //console.log(player2.winsCounter + player2.name);
+    }
+  };
+  console.log(localStorage.players);
 
   //onClick={goBack}
     // const navigate = useNavigate();
@@ -22,16 +41,16 @@ const Who_won = () => {
       </div>
       <div className="align">
         <h1>Vem vann?</h1>
-        <Link to={"/competition"}>
-        <button className="bothPlayers" id="playerOneClickable"> 
-          <p>{player1}</p>
-        </button>
+        <Link to={"/Competition"}>
+          <button className="bothPlayers" id="playerOneClickable" value={players[player1].name} onClick={(e) => AddPoints(e.target.value)}>
+            <p>{players[player1].name}</p>
+          </button>
         </Link>
         <h1>eller</h1>
-        <Link to={"/competition"}>
-        <button className="bothPlayers" id="playerTwoClickable">
-          <p>{player2}</p>
-        </button>
+        <Link to={"/Competition"}>
+          <button className="bothPlayers" id="playerTwoClickable" value={players[player2].name} onClick={(e) => AddPoints(e.target.value)}>
+            <p>{players[player2].name}</p>
+          </button>
         </Link>
       </div>
     </div>
