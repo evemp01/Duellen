@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../styles/menu.css'
+import '../styles/AddPlayer.css'
 import { useNavigate } from 'react-router-dom';
 
 const EditPlayer = ({ players, setPlayers }) => {
@@ -26,9 +26,9 @@ const EditPlayer = ({ players, setPlayers }) => {
   
     return (
       <>
-        <div className="addPlayer">
+        <div className="editPlayer_sida">
         <h1>Redigera spelare</h1>
-        <div>
+        <div className = "inputField">
           <input
             className="roundedCorners"
             type="text"
@@ -37,7 +37,7 @@ const EditPlayer = ({ players, setPlayers }) => {
             placeholder=""
             disabled={playerLimit <= players.length}
           />
-          <button
+          <button className = "plus"
             onClick={handleAddPlayer}
             disabled={playerLimit <= players.length}
           >
@@ -45,12 +45,12 @@ const EditPlayer = ({ players, setPlayers }) => {
           </button>
           {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
         </div>
-        <div>
+        <div className="scrollbar">
           <ul>
             {players.map((player, index) => (
-              <p key={index}>
+              <p className= "listofPlayers" key={index}>
                 {player}
-                <button onClick={() => handleDeletePlayer(index)}>-</button>
+                <button className= "minus" onClick={() => handleDeletePlayer(index)}>-</button>
               </p>
             ))}
           </ul>
@@ -59,7 +59,7 @@ const EditPlayer = ({ players, setPlayers }) => {
           {minPlayers > players.length && (
             <p>Lägg till minst 3 stycken spelare</p>
           )}
-          <button
+          <button className="backtoGame"
             onClick={() => {
               if (minPlayers <= players.length) {
                 navigate(-2);

@@ -46,38 +46,38 @@ const AddPlayer = ({ players, setPlayers }) => {
         </Link>
       </div>
     <div className="addPlayer">
-      <h1>Lägg till spelare</h1>
-      <div>
-        <input
-          className="roundedCorners"
-          type="text"
-          value={newPlayer}
-          onChange={handleInputChange}
-          placeholder=""
-          disabled={playerLimit <= players.length}
-        />
-        <button onClick={handleAddPlayer} disabled={playerLimit <= players.length}>
-          +
-        </button>
-        {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
+        <h1>Lägg till spelare</h1>
+        <div className="inputField">
+          <input
+            className="roundedCorners"
+            type="text"
+            value={newPlayer}
+            onChange={handleInputChange}
+            placeholder=""
+            disabled={playerLimit <= players.length}
+          />
+          <button className="plus" onClick={handleAddPlayer} disabled={playerLimit <= players.length}>
+            +
+          </button>
+          {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
+        </div>
+        <div className="scrollbar">
+          <ul>
+            {players.map((player, index) => (
+              <p className="listofPlayers" key={index}>
+                {player.name}
+                <button className="minus" onClick={() => handleDeletePlayer(index)}>-</button>
+              </p>
+            ))}
+          </ul>
+        </div>
+        <div>
+          {minPlayers > players.length && <p className="message">Lägg till minst 3 spelare</p>}
+          <button className="start" onClick={() => savePlayers(players)} disabled={minPlayers > players.length}>
+            Start
+          </button>
+        </div>
       </div>
-      <div>
-        <ul>
-          {players.map((player, index) => (
-            <p key={index}>
-              {player.name}
-              <button onClick={() => handleDeletePlayer(index)}>-</button>
-            </p>
-          ))}
-        </ul>
-      </div>
-      <div>
-        {minPlayers > players.length && <p>Lägg till minst 3 stycken spelare</p>}
-        <button onClick={() => savePlayers(players)} disabled={minPlayers > players.length}>
-          Start
-        </button>
-      </div>
-    </div>
     </>
   );
 };
