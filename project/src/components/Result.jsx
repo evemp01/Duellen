@@ -1,23 +1,17 @@
-import { useNavigate } from "react-router-dom";
-import "../styles/TopList.css";
+import { Link } from "react-router-dom";
+import "../styles/Result.css";
 
-const TopList = () => {
+const Result = ({ players, setPlayers }) => {
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
   let sortedStoredPlayers = storedPlayers.sort((a, b) => b.winsCounter - a.winsCounter);
-  const navigate = useNavigate();
 
   return (
-    <div className="biggestBoy">
-      <button
-        className="exitButton"
-        onClick={() => {
-          navigate(-2);
-        }}
-      >
-        x
-      </button>
+    <div className="biggiBoyus">
+      <Link to={"/menu"}>
+        <button className="exitButton">z</button>
+      </Link>
       <div className="bigBoy">
-        <h1>Topplista</h1>
+        <h1>Resultat</h1>
         <div>
           <h3>Vinster</h3>
           <div className="column">
@@ -33,9 +27,21 @@ const TopList = () => {
             </ul>
           </div>
         </div>
+        <Link to={"/"}>
+          <button
+            onClick={() => {
+              localStorage.clear();
+              setPlayers([]);
+              console.log(players);
+              console.log(localStorage);
+            }}
+          >
+            Avsluta spel
+          </button>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default TopList;
+export default Result;

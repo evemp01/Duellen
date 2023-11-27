@@ -1,3 +1,14 @@
 .bigBoy{
-    background-color: blue;
+    background-color: rgb(200, 255, 0);
+}
+.column{
+   display: flex;
+   justify-content: baseline;
+
+}
+.lists{
+    list-style: none;
+}
+h3{
+    margin-left: 200px;
 }

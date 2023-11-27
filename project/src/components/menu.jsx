@@ -7,7 +7,9 @@ const Menu = () => {
   return (
     <div>
       <div className="alignright">
-      <button className='exitButton' onClick={() => navigate(-1)}>x</button>
+        <button className="exitButton" onClick={() => navigate(-1)}>
+          x
+        </button>
       </div>
       <Link to={"/EditPlayer"}>
         <div className="aligncenter">
@@ -15,14 +17,18 @@ const Menu = () => {
         </div>
       </Link>
       <div className="aligncenter">
-        <button className="toplist" onClick={() => {}}>
-          Topplista
-        </button>
+        <Link to={"/TopList"}>
+          <button className="toplist" onClick={() => {}}>
+            Topplista
+          </button>
+        </Link>
       </div>
       <div className="aligncenter">
-        <button className="exitGame" onClick={() => {}}>
-          Avsluta spel
-        </button>
+        <Link to={"/Result"}>
+          <button className="exitGame" onClick={() => {}}>
+            Avsluta spel
+          </button>
+        </Link>
       </div>
     </div>
   );
