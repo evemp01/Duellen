@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "../styles/Who_won.css";
 import { Link } from "react-router-dom";
 const Who_won = ({ players }) => {
@@ -11,9 +12,10 @@ const Who_won = ({ players }) => {
     player1 = 1;
     player2 = 2;
   }
-  // console.log(storedPlayers[player1]);
-  // console.log(storedPlayers[player2]);
-  // console.log(storedPlayers);
+
+  const rand = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
 
   const AddPoints = (e) => {
     if (e == players[player1].name) {
@@ -70,6 +72,9 @@ const Who_won = ({ players }) => {
             <p>{players[player2].name}</p>
           </button>
         </Link>
+      </div>
+      <div id="alignBottomText">
+        <h3>Förloraren tar {rand(1, 5)} klunkar</h3>
       </div>
     </div>
   );

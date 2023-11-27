@@ -7,7 +7,7 @@ const EditPlayer = ({ players, setPlayers }) => {
   const [newPlayer, setNewPlayer] = useState("");
   const playerLimit = 21;
   const minPlayers = 3;
-  let storedPlayers = JSON.parse(localStorage.getItem("players"));
+  // let storedPlayers = JSON.parse(localStorage.getItem("players"));
   const handleInputChange = (event) => {
     setNewPlayer(event.target.value);
   };

@@ -25,11 +25,13 @@
 .align {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 200px;
+  align-items: center;
 }
 
 .bothPlayers{
   height: 60px;
+  width: 290px;
   font-family: "Wendy One", sans-serif;
   font-size: 30px;
   border-radius: 15px;
@@ -38,11 +40,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
-#playerOne {
-  background-color: #0197f6;
-}
 #playerOneClickable{
   background-color: #0197f6;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -51,10 +51,7 @@
   background-color: #0187dd;
 }
 
-#playerTwo {
-  background-color: #f55757;
-  margin-bottom: 50px;
-}
+
 #playerTwoClickable{
   background-color: #f55757;
   margin-bottom: 50px;
@@ -62,6 +59,14 @@
 }
 .playerTwoClickable:active {
   background-color: #dc4e4e;
+}
+#alignBottomText {
+  display: flex;
+}
+
+#alignBottomText h3 {
+  margin-left: 92px;
+  white-space: nowrap; /* Prevent the text from wrapping to the next line */
 }
 
 .challenge{
