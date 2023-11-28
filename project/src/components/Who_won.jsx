@@ -49,7 +49,7 @@ const Who_won = ({ players }) => {
           <button className="menuButton">≡</button>
         </Link>
       </div>
-      <div className="align">
+      <div className="alignWhoWon">
         <h1>Vem vann?</h1>
         <Link to={"/Competition"}>
           <button
@@ -73,7 +73,7 @@ const Who_won = ({ players }) => {
           </button>
         </Link>
       </div>
-      <div id="alignBottomText">
+      <div className="alignWhoWon" id="alignBottomText">
         <h3>Förloraren tar {rand(1, 5)} klunkar</h3>
       </div>
     </div>

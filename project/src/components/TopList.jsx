@@ -8,6 +8,7 @@ const TopList = () => {
 
   return (
     <div className="biggestBoy">
+      <div className="alignright">
       <button
         className="exitButton"
         onClick={() => {
@@ -16,6 +17,7 @@ const TopList = () => {
       >
         x
       </button>
+      </div>
       <div className="bigBoy">
         <h1>Topplista</h1>
         <div>

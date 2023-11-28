@@ -22,7 +22,7 @@
   background-color: #cca045;
 }
 
-.align {
+.alignWhoWon {
   display: flex;
   flex-direction: column;
   margin-top: 200px;
@@ -65,7 +65,8 @@
 }
 
 #alignBottomText h3 {
-  margin-left: 92px;
+  margin-left: 0px;
+  
   white-space: nowrap; /* Prevent the text from wrapping to the next line */
 }
 
@@ -82,3 +83,4 @@
   margin-bottom: 30px;
   padding: 25px;
 }
+
