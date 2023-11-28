@@ -3,6 +3,6 @@
     font-family: 'Wendy One', sans-serif;
 }
 a:link, a:visited, a:hover, a:active{
-    color: black !important;
+    color:blueviolet !important;
     text-decoration: none;
 }
