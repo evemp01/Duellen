@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 import "../styles/Result.css";
+import { useNavigate } from "react-router-dom";
 
 const Result = ({ players, setPlayers }) => {
+  const navigate = useNavigate();
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
   let sortedStoredPlayers = storedPlayers.sort((a, b) => b.winsCounter - a.winsCounter);
 
   return (
     <div className="editPlayer_sida">
-      <Link to={"/menu"}>
-        <button className="backArrow"></button>
-      </Link>
+      <button
+        className="backArrow"
+        onClick={() => {
+          navigate(-2);
+        }}
+      ></button>
+
       <div>
         <h1>Resultat</h1>
         <div>
