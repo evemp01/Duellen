@@ -11,6 +11,12 @@ const AddPlayer = ({ players, setPlayers }) => {
     setNewPlayer(event.target.value);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleAddPlayer();
+    }
+  };
+
   const savePlayers = (players) => {
     localStorage.setItem("players", JSON.stringify(players));
 
@@ -45,7 +51,7 @@ const AddPlayer = ({ players, setPlayers }) => {
           <button className="helpButton">?</button>
         </Link>
       </div>
-    <div className="addPlayer">
+      <div className="addPlayer">
         <h1>Lägg till spelare</h1>
         <div className="inputField">
           <input
@@ -53,6 +59,7 @@ const AddPlayer = ({ players, setPlayers }) => {
             type="text"
             value={newPlayer}
             onChange={handleInputChange}
+            onKeyDown={handleKeyPress}
             placeholder=""
             disabled={playerLimit <= players.length}
           />
@@ -66,17 +73,19 @@ const AddPlayer = ({ players, setPlayers }) => {
             {players.map((player, index) => (
               <p className="listofPlayers" key={index}>
                 {player.name}
-                <button className="minus" onClick={() => handleDeletePlayer(index)}>-</button>
+                <button className="minus" onClick={() => handleDeletePlayer(index)}>
+                  -
+                </button>
               </p>
             ))}
           </ul>
         </div>
-        </div>
-        <div>
-          {minPlayers > players.length && <p className="message">Lägg till minst 3 spelare</p>}
-          <button className="start" onClick={() => savePlayers(players)} disabled={minPlayers > players.length}>
-            Start
-          </button>
+      </div>
+      <div>
+        {minPlayers > players.length && <p className="message">Lägg till minst 3 spelare</p>}
+        <button className="start" onClick={() => savePlayers(players)} disabled={minPlayers > players.length}>
+          Start
+        </button>
       </div>
     </>
   );
