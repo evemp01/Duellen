@@ -24,8 +24,8 @@
     background-color: #7FD16A;
     box-sizing: border-box;
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     border: 2px solid;
     transform: scale(var(--ggs,1));
     border-radius: 50px;
@@ -35,19 +35,19 @@
     content: "";
     box-sizing: border-box;
     position: absolute;
-    left: 16px;
+    left: 20px;
   }
   .backArrow::after {
-    width: 18px;
-    height: 18px;
+    width: 23px;
+    height: 23px;
     border-bottom: 5px solid;
     border-left: 5px solid;
     transform: rotate(45deg);
-    bottom: 20px;
+    bottom: 24.2px;
   }
   .backArrow::before {
-    width: 26px;
+    width: 35px;
     height: 5px;
-    bottom: 26px;
+    bottom: 33.4px;
     background: currentColor;
   }

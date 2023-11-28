@@ -72,12 +72,14 @@ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-left: 0.5em;
     
 }
-
 .message{
     font-size: 20px;
     text-align: center;
 }
-
+.start:disabled{
+    opacity: 70%;
+    background-color: #959A94;
+}
 .start{
     font-size: 60px;
     border-radius: 50px;
