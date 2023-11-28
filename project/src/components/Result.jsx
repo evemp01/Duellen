@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import "../styles/Result.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Result = ({ players, setPlayers }) => {
   const navigate = useNavigate();
@@ -8,44 +7,48 @@ const Result = ({ players, setPlayers }) => {
   let sortedStoredPlayers = storedPlayers.sort((a, b) => b.winsCounter - a.winsCounter);
 
   return (
-    <div className="editPlayer_sida">
-      <button
-        className="backArrow"
-        onClick={() => {
-          navigate(-2);
-        }}
-      ></button>
+    <div>
+      <div className="rightyTighty">
+        <button
+          className="backArrow"
+          onClick={() => {
+            navigate(-2);
+          }}
+        ></button>
+      </div>
 
-      <div>
-        <h1>Resultat</h1>
+      <div className="editPlayer_sida">
         <div>
-          <h3>Vinster</h3>
-          <div className="column">
-            <ul className="lists">
-              {sortedStoredPlayers.map((player, index) => (
-                <li key={index}>{player.name}</li>
-              ))}
-            </ul>
-            <ul className="lists">
-              {sortedStoredPlayers.map((player, index) => (
-                <li key={index}>{player.winsCounter}</li>
-              ))}
-            </ul>
+          <h1>Resultat</h1>
+          <div>
+            <h3>Vinster</h3>
+            <div className="column">
+              <ul className="lists">
+                {sortedStoredPlayers.map((player, index) => (
+                  <li key={index}>{player.name}</li>
+                ))}
+              </ul>
+              <ul className="lists">
+                {sortedStoredPlayers.map((player, index) => (
+                  <li key={index}>{player.winsCounter}</li>
+                ))}
+              </ul>
+            </div>
           </div>
+          <Link to={"/"}>
+            <button
+              className="exitGame"
+              onClick={() => {
+                localStorage.clear();
+                setPlayers([]);
+                console.log(players);
+                console.log(localStorage);
+              }}
+            >
+              Avsluta spel
+            </button>
+          </Link>
         </div>
-        <Link to={"/"}>
-          <button
-            className="exitGame"
-            onClick={() => {
-              localStorage.clear();
-              setPlayers([]);
-              console.log(players);
-              console.log(localStorage);
-            }}
-          >
-            Avsluta spel
-          </button>
-        </Link>
       </div>
     </div>
   );
