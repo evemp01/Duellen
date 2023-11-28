@@ -8,11 +8,12 @@
 }
 
 .alignright {
-  display: flex;
+  display: flex;  
   justify-content: flex-end;
 }
 
 .exitButton {
+  border: 2px solid;
   margin-left: 320px;
   border-radius: 50px;
   background-color: #f55757;
