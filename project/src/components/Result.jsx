@@ -6,11 +6,11 @@ const Result = ({ players, setPlayers }) => {
   let sortedStoredPlayers = storedPlayers.sort((a, b) => b.winsCounter - a.winsCounter);
 
   return (
-    <div className="biggiBoyus">
+    <div className="editPlayer_sida">
       <Link to={"/menu"}>
         <button className="exitButton">z</button>
       </Link>
-      <div className="bigBoy">
+      <div>
         <h1>Resultat</h1>
         <div>
           <h3>Vinster</h3>
@@ -29,6 +29,7 @@ const Result = ({ players, setPlayers }) => {
         </div>
         <Link to={"/"}>
           <button
+            className="exitGame"
             onClick={() => {
               localStorage.clear();
               setPlayers([]);
