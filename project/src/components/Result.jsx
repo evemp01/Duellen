@@ -8,7 +8,7 @@ const Result = ({ players, setPlayers }) => {
   return (
     <div className="editPlayer_sida">
       <Link to={"/menu"}>
-        <button className="exitButton">z</button>
+        <button className="backArrow"></button>
       </Link>
       <div>
         <h1>Resultat</h1>
