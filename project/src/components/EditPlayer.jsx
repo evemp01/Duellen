@@ -60,6 +60,7 @@ const EditPlayer = ({ players, setPlayers }) => {
           <input
             id="roundedCorners"
             type="text"
+            maxLength="11"
             value={newPlayer}
             onChange={handleInputChange}
             onKeyDown={handleKeyPress}
