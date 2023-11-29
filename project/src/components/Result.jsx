@@ -22,6 +22,7 @@ const Result = ({ players, setPlayers }) => {
 
       <div className="editPlayer_sida">
         <h1>Resultat</h1>
+
         <h3>Vinster</h3>
         <div className="column">
           <ul className="lists">
@@ -35,7 +36,9 @@ const Result = ({ players, setPlayers }) => {
             ))}
           </ul>
         </div>
+        
       </div>
+
       <div className = "alignExitGame">
       <Link to={"/"}>
         <button

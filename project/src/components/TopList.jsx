@@ -8,7 +8,7 @@ const TopList = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="biggestBoy">
+    <div>
       <div className="alignRight">
       <button
         className="exitButton"
@@ -22,16 +22,17 @@ const TopList = () => {
       <div className="bigBoy">
         <h1>Topplista</h1>
         <div>
-          <h3>Vinster</h3>
+          <h3 id="names">Namn</h3>
+          <h3 id="wins">Vinster</h3>
           <div className="column">
             <ul className="lists">
               {sortedStoredPlayers.map((player, index) => (
-                <li key={index}>{player.name}</li>
+                <li className="name" key={index}>{player.name}</li>
               ))}
             </ul>
             <ul className="lists">
               {sortedStoredPlayers.map((player, index) => (
-                <li key={index}>{player.winsCounter}</li>
+                <li className="points" key={index}>{player.winsCounter}</li>
               ))}
             </ul>
           </div>
