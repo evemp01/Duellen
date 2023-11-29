@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AddPlayer.css";
+import "../styles/helpAndMenuButton.css";
 import { useNavigate } from "react-router-dom";
 
 const EditPlayer = ({ players, setPlayers }) => {

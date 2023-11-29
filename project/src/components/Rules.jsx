@@ -1,4 +1,5 @@
 import "../styles/Rules.css";
+import "../styles/exitButton.css";
 import { useNavigate } from "react-router-dom";
 const Rules = () => {
   const navigate = useNavigate();

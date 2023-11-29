@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/TopList.css";
+import "../styles/exitButton.css";
 
 const TopList = () => {
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
@@ -8,7 +9,7 @@ const TopList = () => {
 
   return (
     <div className="biggestBoy">
-      <div className="alignright">
+      <div className="alignRight">
       <button
         className="exitButton"
         onClick={() => {

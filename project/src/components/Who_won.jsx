@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Who_won.css";
+import "../styles/helpAndMenuButton.css";
 import { Link } from "react-router-dom";
 const Who_won = ({ players }) => {
   let player1 = localStorage.getItem("randomPlayer1");

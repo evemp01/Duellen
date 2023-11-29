@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import challengesJson from "./../challenges.json";
 import "../styles/Competition.css";
+import "../styles/helpAndMenuButton.css";
 import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 // import React, {useCallback} from "react";
