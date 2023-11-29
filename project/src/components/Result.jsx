@@ -22,12 +22,14 @@ const Result = ({ players, setPlayers }) => {
 
       <div className="bigBoy">
         <h1 id="topplista">Resultat</h1>
-
-        <h3 id="topplista">Vinster</h3>
+       <div className="column">
+        <h3 id="names">Namn</h3>
+        <h3 id="wins">Vinster</h3>
+        </div>
         <div className="column">
           <ul className="lists">
             {sortedStoredPlayers.map((player, index) => (
-              <li className="resultNames" key={index}>{player.name}</li>
+              <li className="toplistNames" key={index}>{player.name}</li>
             ))}
           </ul>
           <ul className="lists">
