@@ -6,8 +6,6 @@ const Who_won = ({ players }) => {
   let player2 = localStorage.getItem("randomPlayer2");
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
 
-  // console.log(storedPlayers[player1]);
-  // console.log(storedPlayers[player2]);
   if (storedPlayers[player1] === undefined || storedPlayers[player2] === undefined) {
     player1 = 1;
     player2 = 2;
@@ -17,27 +15,15 @@ const Who_won = ({ players }) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  const AddPoints = (e) => {
-    if (e == players[player1].name) {
-      storedPlayers[player1].winsCounter = storedPlayers[player1].winsCounter + 1;
-      localStorage.setItem("players", JSON.stringify(storedPlayers));
-
-      // console.log(player1.winsCounter);
-      // console.log(player1.winsCounter + player1.name);
+  const AddPoints = (winningPlayer) => {
+    if (winningPlayer === players[player1].name) {
+      storedPlayers[player1].winsCounter += 1;
     } else {
-      storedPlayers[player2].winsCounter = storedPlayers[player2].winsCounter + 1;
-      localStorage.setItem("players", JSON.stringify(storedPlayers));
-
-      //console.log(player2.winsCounter + player2.name);
+      storedPlayers[player2].winsCounter += 1;
     }
+    console.log(storedPlayers);
+    localStorage.setItem("players", JSON.stringify(storedPlayers));
   };
-  console.log(localStorage.players);
-
-  //onClick={goBack}
-  // const navigate = useNavigate();
-  // const goBack = () => {
-  //   navigate(-1);
-  // }
 
   return (
     <div>
@@ -56,7 +42,9 @@ const Who_won = ({ players }) => {
             className="bothPlayers"
             id="playerOneClickable"
             value={players[player1].name}
-            onClick={(e) => AddPoints(e.target.value)}
+            onClick={(e) => {
+              AddPoints(e.target.value);
+            }}
           >
             <p>{players[player1].name}</p>
           </button>
@@ -67,7 +55,9 @@ const Who_won = ({ players }) => {
             className="bothPlayers"
             id="playerTwoClickable"
             value={players[player2].name}
-            onClick={(e) => AddPoints(e.target.value)}
+            onClick={(e) => {
+              AddPoints(e.target.value);
+            }}
           >
             <p>{players[player2].name}</p>
           </button>
