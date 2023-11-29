@@ -1,7 +1,7 @@
 .addPlayer{
     background-color: #FFC957;
     width: 290px;
-    height: 30em;
+    height: 500px;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
@@ -12,7 +12,7 @@
 .editPlayer_sida{
     background-color: #FFC957;
     width: 290px;
-    height: 32em;
+    height: 500px;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
