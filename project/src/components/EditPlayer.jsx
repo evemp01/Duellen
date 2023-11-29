@@ -58,7 +58,7 @@ const EditPlayer = ({ players, setPlayers }) => {
         <h1>Redigera spelare</h1>
         <div className="inputField">
           <input
-            className="roundedCorners"
+            id="roundedCorners"
             type="text"
             value={newPlayer}
             onChange={handleInputChange}

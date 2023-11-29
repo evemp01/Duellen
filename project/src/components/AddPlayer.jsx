@@ -55,7 +55,7 @@ const AddPlayer = ({ players, setPlayers }) => {
         <h1>Lägg till spelare</h1>
         <div className="inputField">
           <input
-            className="roundedCorners"
+            id="roundedCorners"
             type="text"
             value={newPlayer}
             onChange={handleInputChange}

@@ -20,7 +20,7 @@
     margin-top: 40px;
     padding: 10px;
 }
-.roundedCorners{
+#roundedCorners{
     border-radius: 20px 20px 20px 20px;
     font-size: 25px;
     width: 230px;
@@ -41,7 +41,8 @@
 .minus{
     background-color:#f55757;
     font-family: 'Wendy One', sans-serif;
-    
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
     font-size: 30px;
     width: 34px;
     border-radius: 20px 20px 20px 20px;
@@ -90,6 +91,7 @@
     display: flex;
     margin: auto;
     margin-top: 20px;
+    border: solid;
     background-color: #7FD16A;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -97,11 +99,12 @@
     font-family: 'Wendy One', sans-serif;
     font-size: 33px;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 48px;
     padding: 0.2em;
     margin-top: 70px;
     border-radius: 50px;
     background-color: #7FD16A;
+    border: solid;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .align_menu_help{
