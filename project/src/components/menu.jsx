@@ -1,5 +1,6 @@
 import "../styles/menu.css";
 import "../styles/exitButton.css";
+import "../styles/exitGame.css";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const Menu = () => {
         </div>
       </Link>
 
-      <div className="aligncenter">
+      <div className="alignExitGame">
         <Link to={"/Result"}>
           <button className="exitGame" onClick={() => { }}>
             Avsluta spel
