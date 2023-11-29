@@ -8,12 +8,9 @@
     padding: 30px;
     height: 500px;
 }
-
 #names,#wins{
     font-size: 25px;
-    
 }
-
 .column{
    display: flex;
    flex-direction: row;
