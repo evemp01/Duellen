@@ -6,7 +6,8 @@
     color: black;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+    border: 2px solid;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.8);
   }
   .alignExitGame{
     position: absolute;
