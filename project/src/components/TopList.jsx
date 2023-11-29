@@ -20,7 +20,7 @@ const TopList = () => {
         </button>
       </div>
       <div className="bigBoy">
-        <h1>Topplista</h1>
+        <h1 id="topplista">Topplista</h1>
         <div>
           <div className="column">
           <h3 id="names">Namn</h3>
@@ -29,7 +29,7 @@ const TopList = () => {
           <div className="column">
             <ul className="lists">
               {sortedStoredPlayers.map((player, index) => (
-                <li className="name" key={index}>{player.name}</li>
+                <li className="toplistNames" key={index}>{player.name}</li>
               ))}
             </ul>
             <ul className="lists">

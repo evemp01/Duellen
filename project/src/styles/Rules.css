@@ -10,7 +10,7 @@
     height: 600px;
     border-radius: 25px;
     text-align: left;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.5em;
     padding-right:1em;
     padding-bottom: 1em;
@@ -19,7 +19,6 @@
 .rulesInnerDiv{
     overflow-y: auto;
     height: 570px;
-    background-color: #f2c054;
     border-radius: 20px;
     margin-left:20px;
     padding-right:1em;

@@ -11,8 +11,7 @@
 
 #names,#wins{
     font-size: 25px;
-    margin-left: 1em;
-    margin-right: 1em;
+   
    
     
 }
@@ -27,12 +26,16 @@
     list-style: none;
     
 }
-.name{
+.toplistNames{
     margin-bottom: 15px;
-    margin-right: 4em;
+    
     text-align: left;
 }
 .points{
     margin-bottom: 15px;
     margin-right: 2em;
+}
+
+#topplista{
+    margin-left: 0.25em;
 }

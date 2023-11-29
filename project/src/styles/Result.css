@@ -1,14 +1,4 @@
-.editPlayer_sida {
-  background-color: #ffc957;
-  width: 290px;
-  height: 32em;
-  border-radius: 25px;
-  font-family: "Wendy One", sans-serif;
-  text-align: center;
-  margin: auto;
-  margin-top: 40px;
-  padding: 10px;
-}
+
 .rightyTighty {
   display: flex;
   justify-content: flex-end;
@@ -24,7 +14,7 @@
   border-radius: 50px;
   margin-top: 30px;
   margin-right: 20px;
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.8);
 }
 .backArrow::after,
 .backArrow::before {
@@ -46,4 +36,10 @@
   height: 5px;
   bottom: 33.4px;
   background: currentColor;
+}
+
+.resultNames{
+  margin-bottom: 15px;
+  text-align: left;
+  
 }

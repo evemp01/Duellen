@@ -20,19 +20,19 @@ const Result = ({ players, setPlayers }) => {
         ></button>
       </div>
 
-      <div className="editPlayer_sida">
-        <h1>Resultat</h1>
+      <div className="bigBoy">
+        <h1 id="topplista">Resultat</h1>
 
-        <h3>Vinster</h3>
+        <h3 id="topplista">Vinster</h3>
         <div className="column">
           <ul className="lists">
             {sortedStoredPlayers.map((player, index) => (
-              <li key={index}>{player.name}</li>
+              <li className="resultNames" key={index}>{player.name}</li>
             ))}
           </ul>
           <ul className="lists">
             {sortedStoredPlayers.map((player, index) => (
-              <li key={index}>{player.winsCounter}</li>
+              <li className="points" key={index}>{player.winsCounter}</li>
             ))}
           </ul>
         </div>
