@@ -70,17 +70,5 @@
   white-space: nowrap; /* Prevent the text from wrapping to the next line */
 }
 
-.challenge{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #FFC957;
-  height: 220px;
-  border-radius: 25px;
-  font-family: 'Wendy One', sans-serif;
-  font-size: 30px;
-  margin: 0px 30px;
-  margin-bottom: 30px;
-  padding: 25px;
-}
+
 
