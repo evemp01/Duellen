@@ -74,7 +74,7 @@ const Who_won = ({ players }) => {
         </Link>
       </div>
       <div id="alignBottomText">
-        <h3>Förloraren tar {rand(1, 5)} klunkar</h3>
+        <h2>Förloraren tar {rand(1, 5)} klunkar</h2>
       </div>
     </div>
   );

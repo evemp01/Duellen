@@ -29,13 +29,13 @@
     border: none;
 }
 .plus{
-border-radius: 20px 20px 20px 20px;
-font-family: 'Wendy One', sans-serif;
-font-size: 25px;
-height: 38px;
-width: 40px;
-background-color: #7FD16A; 
-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+    border-radius: 20px 20px 20px 20px;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 25px;
+    height: 38px;
+    width: 40px;
+    background-color: #7FD16A; 
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
 }
 .minus{
     background-color:#f55757;

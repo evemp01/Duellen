@@ -60,11 +60,8 @@
 .playerTwoClickable:active {
   background-color: #dc4e4e;
 }
-
-#alignBottomText {
-  display: flex;
-}
-#alignBottomText h3 {
-  margin-left: 92px;
-  white-space: nowrap; /* Prevent the text from wrapping to the next line */
+#alignBottomText h2{
+  align-content: center;
+  text-align: center;
+  /*white-space: nowrap;  Prevent the text from wrapping to the next line */
 }
