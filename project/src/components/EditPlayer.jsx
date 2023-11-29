@@ -45,6 +45,11 @@ const EditPlayer = ({ players, setPlayers }) => {
     localStorage.setItem("players", JSON.stringify(updatedStoredPlayers));
     console.log(localStorage.players);
   };
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleAddPlayer();
+    }
+  };
 
   return (
     <>
@@ -56,6 +61,7 @@ const EditPlayer = ({ players, setPlayers }) => {
             type="text"
             value={newPlayer}
             onChange={handleInputChange}
+            onKeyDown={handleKeyPress}
             placeholder=""
             disabled={playerLimit <= players.length}
           />
@@ -76,20 +82,23 @@ const EditPlayer = ({ players, setPlayers }) => {
             ))}
           </ul>
         </div>
-        <div>
-          {minPlayers > players.length && <p>Lägg till minst 3 spelare</p>}
-          <button
-            className="backtoGame"
-            onClick={() => {
-              if (minPlayers <= players.length) {
-                navigate(-2);
-              }
-            }}
-            disabled={minPlayers > players.length}
-          >
-            Tillbaka till spelet
-          </button>
-        </div>
+      </div>
+      <div>
+        <p className="message" style={{ color: players.length >= minPlayers ? "#F3DFA2" : "black" }}>
+          Lägg till minst 3 spelare
+        </p>
+
+        <button
+          className="backtoGame"
+          onClick={() => {
+            if (minPlayers <= players.length) {
+              navigate(-2);
+            }
+          }}
+          disabled={minPlayers > players.length}
+        >
+          Tillbaka till spelet
+        </button>
       </div>
     </>
   );

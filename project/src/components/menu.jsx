@@ -16,16 +16,18 @@ const Menu = () => {
           <button className="editPlayer">Redigera spelare</button>
         </div>
       </Link>
-      <div className="aligncenter">
-        <Link to={"/TopList"}>
-          <button className="toplist" onClick={() => {}}>
+
+      <Link to={"/TopList"}>
+        <div className="aligncenter">
+          <button className="toplist" onClick={() => { }}>
             Topplista
           </button>
-        </Link>
-      </div>
+        </div>
+      </Link>
+
       <div className="aligncenter">
         <Link to={"/Result"}>
-          <button className="exitGame" onClick={() => {}}>
+          <button className="exitGame" onClick={() => { }}>
             Avsluta spel
           </button>
         </Link>

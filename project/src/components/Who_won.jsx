@@ -49,7 +49,7 @@ const Who_won = ({ players }) => {
           <button className="menuButton">≡</button>
         </Link>
       </div>
-      <div className="alignWho_won">
+      <div className="alignWhoWon">
         <h1>Vem vann?</h1>
         <Link to={"/Competition"}>
           <button
