@@ -1,14 +1,4 @@
-.editPlayer_sida {
-  background-color: #ffc957;
-  width: 290px;
-  height: 32em;
-  border-radius: 25px;
-  font-family: "Wendy One", sans-serif;
-  text-align: center;
-  margin: auto;
-  margin-top: 40px;
-  padding: 10px;
-}
+
 .rightyTighty {
   display: flex;
   justify-content: flex-end;
@@ -46,4 +36,10 @@
   height: 5px;
   bottom: 33.4px;
   background: currentColor;
+}
+
+.resultNames{
+  margin-bottom: 15px;
+  text-align: left;
+  
 }
