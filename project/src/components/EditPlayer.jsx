@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AddPlayer.css";
+import "../styles/helpAndMenuButton.css";
 import { useNavigate } from "react-router-dom";
 
 const EditPlayer = ({ players, setPlayers }) => {
@@ -57,8 +58,9 @@ const EditPlayer = ({ players, setPlayers }) => {
         <h1>Redigera spelare</h1>
         <div className="inputField">
           <input
-            className="roundedCorners"
+            id="roundedCorners"
             type="text"
+            maxLength="11"
             value={newPlayer}
             onChange={handleInputChange}
             onKeyDown={handleKeyPress}

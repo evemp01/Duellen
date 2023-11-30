@@ -1,4 +1,6 @@
 import "../styles/menu.css";
+import "../styles/exitButton.css";
+import "../styles/exitGame.css";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -6,11 +8,12 @@ const Menu = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="alignright">
+      <div className="alignRight">
         <button className="exitButton" onClick={() => navigate(-1)}>
           x
         </button>
       </div>
+      <div className="alignMeny">
       <Link to={"/EditPlayer"}>
         <div className="aligncenter">
           <button className="editPlayer">Redigera spelare</button>
@@ -25,12 +28,13 @@ const Menu = () => {
         </div>
       </Link>
 
-      <div className="aligncenter">
+      <div className="alignExitGame">
         <Link to={"/Result"}>
           <button className="exitGame" onClick={() => { }}>
             Avsluta spel
           </button>
         </Link>
+      </div>
       </div>
     </div>
   );

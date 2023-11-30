@@ -1,0 +1,19 @@
+.exitGame {
+    font-family: "Wendy One", sans-serif;
+    font-size: 25px;
+    border-radius: 50px;
+    background-color: #f55757;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid;
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.8);
+  }
+  .alignExitGame{
+    position: absolute;
+    margin-bottom: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom:0;
+  }

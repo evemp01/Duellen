@@ -1,10 +1,10 @@
 .nextButton{
     font-size: 60px;
     border-radius: 50px;
+    border: solid;
     background-color: #7FD16A;
     font-family: 'Wendy One', sans-serif;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.8);    
 }
 .align1 {
     display: flex;
@@ -45,4 +45,5 @@
     margin: 0px 30px;
     margin-bottom: 30px;
     padding: 25px;
+    text-align: center;
   }

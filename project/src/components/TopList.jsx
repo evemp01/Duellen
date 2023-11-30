@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/TopList.css";
+import "../styles/exitButton.css";
 
 const TopList = () => {
   let storedPlayers = JSON.parse(localStorage.getItem("players"));
@@ -7,30 +8,33 @@ const TopList = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="biggestBoy">
-      <div className="alignright">
-      <button
-        className="exitButton"
-        onClick={() => {
-          navigate(-2);
-        }}
-      >
-        x
-      </button>
+    <div>
+      <div className="alignRight">
+        <button
+          className="exitButton"
+          onClick={() => {
+            navigate(-2);
+          }}
+        >
+          x
+        </button>
       </div>
       <div className="bigBoy">
-        <h1>Topplista</h1>
+        <h1 id="topplista">Topplista</h1>
         <div>
-          <h3>Vinster</h3>
+          <div className="column">
+          <h3 id="names">Namn</h3>
+          <h3 id="wins">Vinster</h3>
+          </div>
           <div className="column">
             <ul className="lists">
               {sortedStoredPlayers.map((player, index) => (
-                <li key={index}>{player.name}</li>
+                <li className="toplistNames" key={index}>{player.name}</li>
               ))}
             </ul>
             <ul className="lists">
               {sortedStoredPlayers.map((player, index) => (
-                <li key={index}>{player.winsCounter}</li>
+                <li className="points" key={index}>{player.winsCounter}</li>
               ))}
             </ul>
           </div>

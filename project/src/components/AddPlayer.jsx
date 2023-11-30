@@ -55,8 +55,9 @@ const AddPlayer = ({ players, setPlayers }) => {
         <h1>Lägg till spelare</h1>
         <div className="inputField">
           <input
-            className="roundedCorners"
+            id="roundedCorners"
             type="text"
+            maxLength="11"
             value={newPlayer}
             onChange={handleInputChange}
             onKeyDown={handleKeyPress}
