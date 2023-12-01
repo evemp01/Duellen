@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AddPlayer.css";
+import Logga from "../images/logga4.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const AddPlayer = ({ players, setPlayers }) => {
@@ -50,6 +51,9 @@ const AddPlayer = ({ players, setPlayers }) => {
         <Link to={"/Rules"}>
           <button className="helpButton">?</button>
         </Link>
+      </div>
+      <div id="containerLogga">
+        <img src={Logga} alt="duellen" id = "logga"></img>
       </div>
       <div className="addPlayer">
         <h1>Lägg till spelare</h1>
