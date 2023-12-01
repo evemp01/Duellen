@@ -58,10 +58,15 @@
     border: none;
     color:#fff;
 }
-.scrollbar{
+.scrollbarAdd{
     overflow-y: auto;
     max-height: 200px;
-    
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.scrollbarEdit{
+    overflow-y: auto;
+    max-height: 360px;
     border-radius: 20px;
     margin-top: 10px;
 }

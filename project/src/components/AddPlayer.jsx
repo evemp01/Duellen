@@ -73,7 +73,7 @@ const AddPlayer = ({ players, setPlayers }) => {
           </button>
           {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
         </div>
-        <div className="scrollbar">
+        <div className="scrollbarAdd">
           <ul>
             {players.map((player, index) => (
               <p className="listofPlayers" key={index}>
