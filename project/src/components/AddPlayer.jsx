@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AddPlayer.css";
+import Logga from "../images/logga4.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const AddPlayer = ({ players, setPlayers }) => {
@@ -51,12 +52,16 @@ const AddPlayer = ({ players, setPlayers }) => {
           <button className="helpButton">?</button>
         </Link>
       </div>
+      <div id="containerLogga">
+        <img src={Logga} alt="duellen" id = "logga"></img>
+      </div>
       <div className="addPlayer">
         <h1>Lägg till spelare</h1>
         <div className="inputField">
           <input
-            className="roundedCorners"
+            id="roundedCorners"
             type="text"
+            maxLength="11"
             value={newPlayer}
             onChange={handleInputChange}
             onKeyDown={handleKeyPress}
@@ -68,7 +73,7 @@ const AddPlayer = ({ players, setPlayers }) => {
           </button>
           {players.length >= playerLimit && <p>Max antal spelare uppnått</p>}
         </div>
-        <div className="scrollbar">
+        <div className="scrollbarAdd">
           <ul>
             {players.map((player, index) => (
               <p className="listofPlayers" key={index}>

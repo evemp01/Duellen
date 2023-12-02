@@ -1,6 +1,7 @@
 import React from "react";
 import challengesJson from "./../challenges.json";
 import "../styles/Competition.css";
+import "../styles/helpAndMenuButton.css";
 import { Link } from "react-router-dom";
 
 const randomPlayers = (players) => {

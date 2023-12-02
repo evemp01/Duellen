@@ -1,7 +1,15 @@
+#containerLogga{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#logga{
+    height: 190px;
+}
 .addPlayer{
     background-color: #FFC957;
     width: 290px;
-    height: 30em;
+    height: 330px;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
@@ -12,15 +20,15 @@
 .editPlayer_sida{
     background-color: #FFC957;
     width: 290px;
-    height: 32em;
+    height: 500px;
     border-radius: 25px;
     font-family: 'Wendy One', sans-serif;
     text-align: center;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 130px;
     padding: 10px;
 }
-.roundedCorners{
+#roundedCorners{
     border-radius: 20px 20px 20px 20px;
     font-size: 25px;
     width: 230px;
@@ -35,22 +43,30 @@
     height: 38px;
     width: 40px;
     background-color: #7FD16A; 
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+    border: none;
+    
 }
 .minus{
     background-color:#f55757;
     font-family: 'Wendy One', sans-serif;
-    font-size: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 30px;
     width: 34px;
     border-radius: 20px 20px 20px 20px;
     height: 34px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-left: auto;
+    border: none;
+    color:#fff;
 }
-.scrollbar{
+.scrollbarAdd{
     overflow-y: auto;
-    max-height: 22em;
-    background-color: #f2c054;
+    max-height: 200px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.scrollbarEdit{
+    overflow-y: auto;
+    max-height: 360px;
     border-radius: 20px;
     margin-top: 10px;
 }
@@ -63,7 +79,7 @@
 }
 .listofPlayers{
     display: flex;
-    font-size: 30px;
+    font-size: 27px;
     background-color: #f3dfa2;
     border-radius: 20px 20px;
     height: 34px;
@@ -87,17 +103,19 @@
     display: flex;
     margin: auto;
     margin-top: 20px;
+    border: solid;
     background-color: #7FD16A;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.8);
 }
 .backtoGame{
     font-family: 'Wendy One', sans-serif;
     font-size: 33px;
+    align-items: center;
+    margin-left: 48px;
     padding: 0.2em;
-    margin-top: 70px;
     border-radius: 50px;
     background-color: #7FD16A;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.8);
 }
 .align_menu_help{
     font-family: 'Wendy One', sans-serif;
