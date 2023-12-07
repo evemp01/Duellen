@@ -1,7 +1,8 @@
 
 .rightyTighty {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 .backArrow {
   background-color: #7fd16a;
