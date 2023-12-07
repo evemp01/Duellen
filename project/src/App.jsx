@@ -12,6 +12,7 @@ import Result from "./components/Result";
 
 function App() {
   const [players, setPlayers] = useState([]);
+
   return (
     <BrowserRouter>
       <div className="app_big_div">
