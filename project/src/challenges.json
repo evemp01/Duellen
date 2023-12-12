@@ -1,6 +1,6 @@
 {
     "allChallenges": [
-      {"challenge":"Säg djur på a (Blå spelare börjar, den som inte kommer på något nytt förlorar)"},
+      {"challenge":"Blå spelare börjar: Säg djur på A"},
       {"challenge":"Armbrytning"},
       {"challenge":"Tummekrig"},
       {"challenge":"Sten sax påse (bäst av 3 vinner)"},
@@ -21,6 +21,6 @@
       {"challenge":"Snabbast att börja sjunga en låt med ordet 'road' vinner"},
       {"challenge":"Sabbast att räkna ut 7 * 4 vinner"},
       {"challenge":"Snabbast att räkna ut 56 / 8 vinner"},
-      {"challenge":"Hämta tre blåa saker snabbast tillbaks vinner"}
+      {"challenge":"Hämta tre blåa saker, snabbast tillbaks vinner"}
     ]
   }
