@@ -33,7 +33,6 @@ const EditPlayer = ({ players, setPlayers }) => {
         ...storedPlayers,
       ];
       localStorage.setItem("players", JSON.stringify(updatedStoredPlayers));
-      console.log(localStorage.players);
       setNewPlayer("");
     }
   };
@@ -44,7 +43,6 @@ const EditPlayer = ({ players, setPlayers }) => {
     let storedPlayers = JSON.parse(localStorage.getItem("players")) || [];
     const updatedStoredPlayers = storedPlayers.filter((_, i) => i !== index);
     localStorage.setItem("players", JSON.stringify(updatedStoredPlayers));
-    console.log(localStorage.players);
   };
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {

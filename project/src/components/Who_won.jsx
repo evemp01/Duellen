@@ -22,7 +22,6 @@ const Who_won = ({ players }) => {
     } else {
       storedPlayers[player2].winsCounter += 1;
     }
-    console.log(storedPlayers);
     localStorage.setItem("players", JSON.stringify(storedPlayers));
   };
 

@@ -48,8 +48,6 @@ const Result = ({ players, setPlayers }) => {
           onClick={() => {
             localStorage.clear();
             setPlayers([]);
-            console.log(players);
-            console.log(localStorage);
           }}
         >
           Avsluta spel
